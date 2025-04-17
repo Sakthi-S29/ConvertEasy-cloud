@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ConvertEasy | File Converter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>ConvertEasy</h1>
+      <p class="subtitle">Convert your files to any format in seconds</p>
+    </header>
+
+    <div class="converter-box" id="dropZone">
+      <div class="upload-icon">📁</div>
+      <h3>Drag & Drop your files here</h3>
+      <p>or</p>
+      <input type="file" id="fileInput" class="file-input">
+      <button class="btn" onclick="document.getElementById('fileInput').click()">Browse Files</button>
+      <div class="file-info" id="fileInfo"></div>
+      <div class="file-error" id="fileError">File exceeds maximum size limit</div>
+      <div class="progress-bar" id="progressBar">
+        <div class="progress" id="progress"></div>
+      </div>
+    </div>
+
+    <div class="format-sections">
+      <div class="format-section media-section">
+        <h3 class="section-title">🎵 Media Files</h3>
+        <div class="format-options">
+          <div class="format-card" data-format="mp3" data-max-size="25">
+            <div class="format-icon">🎵</div>
+            <div class="format-details">
+              <div class="format-name">MP3 Audio</div>
+              <div class="file-size-limit">Max size: 25MB</div>
+            </div>
+          </div>
+          <div class="format-card" data-format="mp4" data-max-size="50">
+            <div class="format-icon">🎥</div>
+            <div class="format-details">
+              <div class="format-name">MP4 Video</div>
+              <div class="file-size-limit">Max size: 50MB</div>
+            </div>
+          </div>
+          <div class="format-card" data-format="mov" data-max-size="50">
+            <div class="format-icon">📽️</div>
+            <div class="format-details">
+              <div class="format-name">MOV Video</div>
+              <div class="file-size-limit">Max size: 50MB</div>
+            </div>
+          </div>
+          <div class="format-card" data-format="wav" data-max-size="30">
+            <div class="format-icon">🔊</div>
+            <div class="format-details">
+              <div class="format-name">WAV Audio</div>
+              <div class="file-size-limit">Max size: 30MB</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="format-section doc-section">
+        <h3 class="section-title">📄 Documents</h3>
+        <div class="format-options">
+          <div class="format-card selected" data-format="pdf" data-max-size="50">
+            <div class="format-icon">📄</div>
+            <div class="format-details">
+              <div class="format-name">PDF Document</div>
+              <div class="file-size-limit">Max size: 50MB</div>
+            </div>
+          </div>
+          <div class="format-card" data-format="docx" data-max-size="30">
+            <div class="format-icon">📝</div>
+            <div class="format-details">
+              <div class="format-name">Word (DOCX)</div>
+              <div class="file-size-limit">Max size: 30MB</div>
+            </div>
+          </div>
+          
+          <div class="format-card" data-format="jpg" data-max-size="15">
+            <div class="format-icon">🖼️</div>
+            <div class="format-details">
+              <div class="format-name">JPG Image</div>
+              <div class="file-size-limit">Max size: 15MB</div>
+            </div>
+          </div>
+          <div class="format-card" data-format="png" data-max-size="20">
+            <div class="format-icon">🖼️</div>
+            <div class="format-details">
+              <div class="format-name">PNG Image</div>
+              <div class="file-size-limit">Max size: 20MB</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn-outline" id = "cancelBtn">Cancel</button>
+      <button class="btn" id="convertBtn" disabled>Convert</button>
+    </div>
+
+    <footer>
+      <p>Secure file conversion. Your files are deleted after 1 hour.</p>
+      <p>Need to convert larger files? <a href="#" style="color: var(--primary);">Upgrade to Pro</a></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

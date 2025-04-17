@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-magic
+pillow
+python-docx
+pdfplumber
+python-multipart
+psycopg2-binary
+
+#System Packages = ffmpeg libreoffice libmagic1

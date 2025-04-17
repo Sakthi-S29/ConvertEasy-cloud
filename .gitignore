@@ -1,0 +1,25 @@
+# Ignore runtime-generated files
+backend/uploads/
+backend/converted/
+
+# Python junk
+__pycache__/
+*.pyc
+.env
+
+# VSCode/IDE
+.vscode/
+.idea/
+
+venv/
+
+setup.txt
+
+#ignore infrastructure folder
+infrastructure/.terraform
+infrastructure/terraform.tfstate
+infrastructure/terraform.tfstate.backup
+infrastructure/terraform.tfvars
+infrastructure/.terraform.lock.hcl
+
+# Ignore all files in the infrastructure folder

@@ -1,0 +1,256 @@
+:root {
+    --primary: #4361ee;
+    --primary-light: #e0e7ff;
+    --dark: #1e293b;
+    --light: #f8fafc;
+    --gray: #94a3b8;
+    --error: #ef4444;
+    --media-color: #8b5cf6;
+    --doc-color: #10b981;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f1f5f9;
+    color: var(--dark);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--gray);
+    font-weight: 400;
+}
+
+.converter-box {
+    border: 2px dashed var(--gray);
+    border-radius: 8px;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    background: var(--primary-light);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.converter-box:hover {
+    border-color: var(--primary);
+}
+
+.converter-box.active {
+    border-color: var(--primary);
+    background: rgba(67, 97, 238, 0.1);
+}
+
+.converter-box.error {
+    border-color: var(--error);
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.upload-icon {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.file-input {
+    display: none;
+}
+
+.btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background: #3a56d4;
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary-light);
+}
+
+.btn:disabled {
+    background: var(--gray);
+    cursor: not-allowed;
+    transform: none;
+}
+
+.format-sections {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.format-section {
+    flex: 1;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.media-section {
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    background: rgba(139, 92, 246, 0.05);
+}
+
+.doc-section {
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    background: rgba(16, 185, 129, 0.05);
+}
+
+.section-title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.media-section .section-title {
+    color: var(--media-color);
+}
+
+.doc-section .section-title {
+    color: var(--doc-color);
+}
+
+.format-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.format-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 0.75rem;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: white;
+}
+
+.media-section .format-card:hover {
+    border-color: var(--media-color);
+}
+
+.doc-section .format-card:hover {
+    border-color: var(--doc-color);
+}
+
+.format-card.selected {
+    border-color: var(--primary);
+    background: var(--primary-light);
+}
+
+.format-card.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  
+
+.format-icon {
+    font-size: 1.25rem;
+}
+
+.media-section .format-icon {
+    color: var(--media-color);
+}
+
+.doc-section .format-icon {
+    color: var(--doc-color);
+}
+
+.format-details {
+    flex: 1;
+}
+
+.format-name {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.file-size-limit {
+    font-size: 0.75rem;
+    color: var(--gray);
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.file-info {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.file-error {
+    color: var(--error);
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #e2e8f0;
+    border-radius: 3px;
+    margin-top: 1rem;
+    overflow: hidden;
+    display: none;
+}
+
+.progress {
+    height: 100%;
+    background: var(--primary);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--gray);
+    font-size: 0.9rem;
+}

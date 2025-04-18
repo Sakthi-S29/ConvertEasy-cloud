@@ -90,7 +90,7 @@ cancelBtn.addEventListener('click', () => {
         formData.append('output_format', selectedFormat);
 
         try {
-            const res = await fetch('http://127.0.0.1:8000/convert', {
+            const res = await fetch('http://converteasy-backend-alb-1778594100.us-east-1.elb.amazonaws.com/convert', {
                 method: 'POST',
                 body: formData
             });
@@ -182,7 +182,7 @@ cancelBtn.addEventListener('click', () => {
 
     function showDownloadLink(url) {
         output.innerHTML = `
-            <a href="http://127.0.0.1:8000${url}" download class="download-link">
+            <a href="converteasy-backend-alb-1778594100.us-east-1.elb.amazonaws.com${url}" download class="download-link">
                 Download ${selectedFormat.toUpperCase()} File
             </a>`;
     }

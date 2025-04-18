@@ -1,0 +1,12 @@
+# .dockerignore
+__pycache__/
+*.pyc
+*.pyo
+*.log
+*.db
+*.pem
+.env
+venv/
+.idea/
+.dockerignore
+Dockerfile

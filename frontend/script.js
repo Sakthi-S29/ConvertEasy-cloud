@@ -182,8 +182,9 @@ cancelBtn.addEventListener('click', () => {
 
     function showDownloadLink(url) {
         output.innerHTML = `
-            <a href="converteasy-backend-alb-1778594100.us-east-1.elb.amazonaws.com${url}" download class="download-link">
-                Download ${selectedFormat.toUpperCase()} File
+            <a href="${url}" download class="btn download-link">
+                ⬇️ Download ${selectedFormat.toUpperCase()} File
             </a>`;
-    }
+    }       
+    
 });

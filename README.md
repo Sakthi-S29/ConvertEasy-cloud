@@ -12,9 +12,8 @@ Absolutely! Here is your **elaborated `README.md`** for the **ConvertEasy** proj
 
 
 
-```md
 ![cloud_project_architecture](https://github.com/user-attachments/assets/a1fca7fb-5f1f-491f-b176-bc28c32a978c)
-```
+
 
 ---
 

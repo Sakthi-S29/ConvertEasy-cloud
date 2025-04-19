@@ -1,7 +1,3 @@
-Absolutely! Here is your **elaborated `README.md`** for the **ConvertEasy** project with a well-structured breakdown, a placeholder for the architecture diagram, and an explanation of the full **application workflow**.
-
----
-
 # 🌩️ ConvertEasy – Cloud-Native File Conversion Platform
 
 **ConvertEasy** is a cloud-native application that enables users to convert files (documents, images, audio, video) from one format to another via a user-friendly web interface. It is built on modern AWS cloud services using Infrastructure-as-Code (Terraform), ensuring full automation, scalability, and security.

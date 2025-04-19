@@ -6,6 +6,9 @@ Absolutely! Here is your **elaborated `README.md`** for the **ConvertEasy** proj
 
 **ConvertEasy** is a cloud-native application that enables users to convert files (documents, images, audio, video) from one format to another via a user-friendly web interface. It is built on modern AWS cloud services using Infrastructure-as-Code (Terraform), ensuring full automation, scalability, and security.
 
+<img width="605" alt="image" src="https://github.com/user-attachments/assets/d1d2066e-aa88-4fa3-97b8-957d348c3cdf" />
+
+
 ---
 
 ## 📸 Architecture Diagram

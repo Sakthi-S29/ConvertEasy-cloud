@@ -6,10 +6,13 @@ WORKDIR /app
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
-    ffmpeg \
     libreoffice \
-    libmagic1 \ 
+    ffmpeg \
+    libmagic1 \
+    poppler-utils \
+    curl \
     && rm -rf /var/lib/apt/lists/*
+
 
 # Copy dependencies and install them
 COPY requirements.txt .

@@ -5,8 +5,8 @@ import os
 import uuid
 import boto3
 import magic
-import psycopg2
 import threading
+import time
 from datetime import datetime
 from dotenv import load_dotenv
 from converters.docx_to_pdf import convert_docx_to_pdf
@@ -108,25 +108,20 @@ async def smart_convert(file: UploadFile = File(...), output_format: str = Form(
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Conversion failed: {str(e)}")
 
+dynamodb = boto3.resource("dynamodb")
+logs_table = dynamodb.Table("converteasy-logs")
 
 def log_to_db(file_name, file_type, converted_to):
     try:
-        conn = psycopg2.connect(
-            host=os.getenv("RDS_HOST"),
-            database=os.getenv("RDS_DB"),
-            user=os.getenv("RDS_USER"),
-            password=os.getenv("RDS_PASS")
-        )
-        cursor = conn.cursor()
-        cursor.execute(
-            "INSERT INTO conversions_log (file_name, file_type, converted_to) VALUES (%s, %s, %s);",
-            (file_name, file_type, converted_to)
-        )
-        conn.commit()
-        cursor.close()
-        conn.close()
+        logs_table.put_item(Item={
+            "id": str(uuid.uuid4()),
+            "file_name": file_name,
+            "file_type": file_type,
+            "converted_to": converted_to,
+            "timestamp": int(time.time())
+        })
     except Exception as e:
-        print(f"[DB ERROR] Failed to log to DB: {e}")
+        print(f"[DB ERROR] Failed to log to DynamoDB: {e}")
 
 async def preflight_handler():
     return JSONResponse(status_code=200)

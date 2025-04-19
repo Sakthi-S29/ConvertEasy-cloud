@@ -90,7 +90,7 @@ cancelBtn.addEventListener('click', () => {
         formData.append('output_format', selectedFormat);
 
         try {
-            const API_BASE_URL = "http://converteasy-backend-alb-1871620831.us-east-1.elb.amazonaws.com";
+            const API_BASE_URL = "http://converteasy-backend-alb-516812590.us-east-1.elb.amazonaws.com";
             const res = await fetch(`${API_BASE_URL}/convert`, {
                 method: 'POST',
                 body: formData

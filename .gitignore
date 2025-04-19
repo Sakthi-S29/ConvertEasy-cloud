@@ -23,3 +23,4 @@ infrastructure/terraform.tfvars
 infrastructure/.terraform.lock.hcl
 
 # Ignore all files in the infrastructure folder
+infrastructure/*.pem

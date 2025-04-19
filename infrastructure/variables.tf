@@ -1,12 +1,3 @@
-variable "db_name" {
-  default = "converteasy_db"
-}
-variable "db_username" {
-  default = "sakthisharan"
-}
-variable "db_password" {
-  sensitive = true
-}
 variable "aws_access_key" {
   type        = string
   description = "Temporary access key from Learner Lab"

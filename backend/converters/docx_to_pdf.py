@@ -9,7 +9,7 @@ def convert_docx_to_pdf(input_path: str, output_path: str):
     print(f"[DEBUG] Running LibreOffice: {input_path} ➝ {output_dir}")
 
     result = subprocess.run([
-        "/Applications/LibreOffice.app/Contents/MacOS/soffice",
+        "libreoffice",  # ✅ this works in container
         "--headless",
         "--nologo",
         "--convert-to", "pdf",

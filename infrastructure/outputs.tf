@@ -8,11 +8,6 @@ output "s3_website_url" {
   value       = "http://${aws_s3_bucket.frontend.bucket}.s3-website-${var.aws_region}.amazonaws.com"
 }
 
-output "rds_endpoint" {
-  description = "PostgreSQL RDS Endpoint"
-  value       = aws_db_instance.postgres.address
-}
-
 output "backend_ec2_private_ip" {
   description = "Private IP address of the EC2 instance"
   value       = aws_instance.backend.private_ip
@@ -30,10 +25,6 @@ output "converted_bucket" {
 
 output "ec2_security_group_id" {
   value = aws_security_group.ec2_sg.id
-}
-
-output "rds_security_group_id" {
-  value = aws_security_group.rds_sg.id
 }
 
 output "ec2_public_ip" {
